@@ -1,0 +1,17 @@
+#nodeName;CodeRegion;Region;API_Base_URL;Push_Server
+1;EU;EU (Europe);https://dilinkappoversea-eu.byd.auto;https://dilinkpush-eu.byd.auto:8443
+2;SG;SG (Singapore/APAC);https://dilinkappoversea-sg.byd.auto;https://dilinkpush-sg.byd.auto:8443
+3;AU;AU (Australia);https://dilinkappoversea-au.byd.auto;https://dilinkpush-au.byd.auto:8443
+4;BR;BR (Brazil);https://dilinkappoversea-br.byd.auto;https://dilinkpush-br.byd.auto:8443
+5;JP;JP (Japan);https://dilinkappoversea-jp.byd.auto;https://dilinkpush-jp.byd.auto:8443
+6;UZ;UZ (Uzbekistan);https://dilinkappoversea-uz.byd.auto;https://dilinkpush-uz.byd.auto:8443
+7;NO;NO (Middle East/Africa);https://dilinkappoversea-no.byd.auto;https://dilinkpush-no.byd.auto:8443
+8;MX;MX (Mexico/LatAm);https://dilinkappoversea-mx.byd.auto;https://dilinkpush-mx.byd.auto:8443
+9;ID;ID (Indonesia);https://dilinkappoversea-id.byd.auto;-
+10;TR;TR (Turkey);https://dilinkappoversea-tr.byd.auto;-
+11;KR;KR (Korea);https://dilinkappoversea-kr.byd.auto;-
+12;IN;IN (India);https://dilinkappoversea-in.byd.auto;-
+13;VN;VN (Vietnam);https://dilinkappoversea-vn.byd.auto;-
+14;SA;SA (Saudi Arabia);https://dilinkappoversea-sa.byd.auto;-
+15;OM;OM (Oman);https://dilinkappoversea-om.byd.auto;-
+16;KZ;KZ (Kazakhstan);https://dilinkappoversea-kz.byd.auto;-
