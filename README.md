@@ -73,10 +73,10 @@ To run this solution locally, ensure you have the **.NET SDK** installed or load
 ### **Installation**
 
 1. **Clone the repository:**  
-   git clone \[https://github.com/\](https://github.com/)\[your-username\]/\[repo-name\].git
+   git clone https://github.com/Moreno-Borsalino/BydClient.git
 
 2. **Navigate to the project directory:**  
-   cd \[repo-name\]/\[SpecificProjectFolder\]
+   cd BydClient\BydClient
 
 3. **Build and Run:**  
    dotnet run
