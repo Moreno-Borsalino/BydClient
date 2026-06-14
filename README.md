@@ -88,7 +88,7 @@ To run this solution locally, ensure you have the **.NET SDK** installed or load
 
      **Example:**
    If you want a configuration for Germany with german messages use this file:
-   ```json
+```json
 {
   "BYD": {
     "Username": "test@example.com",
