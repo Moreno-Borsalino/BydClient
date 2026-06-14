@@ -32,7 +32,7 @@ Thanks to anyone who wants to try it and provide me with results and suggestions
 The client can be configured in several ways:
 
 ### appsettings.json file
-If this file is present, the information it contains is used. If it is absent, environment variables can be used.
+If this file is present, the information it contains is used. If it is absent, environment variables can be used otherwise default inside source code is used.
 
 If BaseUrl is empty, it is calculated based on the CountryCode field. You can view the CSV files that calculate the URLs to use based on the selected country.
 ```json
