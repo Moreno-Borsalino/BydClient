@@ -8,7 +8,7 @@ The goal is to access the BYD vehicle APIs to obtain information about the car's
 This is a first version and needs to be tested with access to various car models to ensure the porting has been done without errors.  
 I'm counting on the help of some BYD owners and C\# developers to test the access and report any errors.  
 You can examine the code to ensure there's no risk of credential theft.  
-This is purely an exercise of curiosity and to fill the gap in the C\# version for accessing the BYD APIs.  
+This is purely an exercise of curiosity and to fill the gap in the C\# version for accessing the BYD APIs. In fact, there are only PHP or Python projects.  
 If the information reading part of the code works, you can already see the parts for sending commands to the car, and this will be the next step in a future version.
 
 Thanks to anyone who wants to try it and provide me with results and suggestions.
