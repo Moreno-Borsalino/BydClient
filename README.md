@@ -79,7 +79,14 @@ To run this solution locally, ensure you have the **.NET SDK** installed or load
 2. **Navigate to the project directory:**  
    cd BydClient\BydClient
 
-3. **Build and Run:**  
+3. **edit appsettings.json file:**
+   In appsettings.json file write the information about:
+    **Username e Password** for authentication
+    **CountryCode** to automatically select the server URL for your country
+    **Language** to have messages in your preferred language
+    **BaseUrl** set value in this field if you want use a specific BYD server
+
+5. **Build and Run:**  
    dotnet run
 
 
