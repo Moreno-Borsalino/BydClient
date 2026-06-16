@@ -11,7 +11,7 @@ public sealed class BatteryHeatParams : BaseModel, IControlParams
     /// <summary>
     /// @param array&lt;string, mixed&gt; $data
     /// </summary>
-    protected override void Populate(IDictionary<string, object> data)
+    protected override void Populate(IDictionary<string, object?> data)
     {
         if(data.TryGetValue("enabled", out var value) && value != null)
         {

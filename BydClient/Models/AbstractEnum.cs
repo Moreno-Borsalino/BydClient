@@ -26,7 +26,7 @@ public abstract class AbstractEnum
             // In C#, constants in a class are retrieved via Reflection
             var constants = type.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
                 .Where(f => f.IsLiteral && !f.IsInitOnly && f.FieldType == typeof(int))
-                .ToDictionary(f => f.Name, f => (int)f.GetValue(null));
+                .ToDictionary(f => f.Name, f => (int)f.GetValue(null)!);
 
             _cache[type] = constants;
         }

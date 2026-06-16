@@ -57,7 +57,8 @@ public static class HvacApi
 
         var hvacData = decoded != null ?
             (decoded.TryGetValue("statusNow", out var statusNowProperty)?
-            new Dictionary<string, object>(){ { "statusNow", statusNowProperty } } :decoded ) : new Dictionary<string, object>();
+            new Dictionary<string, object?>(){ { "statusNow", statusNowProperty } } :
+            decoded as Dictionary<string, object?> ) : new Dictionary<string, object?>();
 
         return new HvacStatus(hvacData);
     }

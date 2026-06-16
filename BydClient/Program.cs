@@ -48,7 +48,7 @@ internal class Program
                 Console.WriteLine($"Range: {realtime.EnduranceMileageV2} {realtime.EnduranceMileageV2Unit}");
                 Console.WriteLine($"Total mileage: {realtime.TotalMileageV2} {realtime.TotalMileageV2Unit}");
                 Console.WriteLine($"Charge state: {realtime.ChargeState}");
-                Console.WriteLine($"Locked: {(realtime.IsLocked().HasValue ? (realtime.IsLocked().Value ? "yes" : "no") : "unknown")}");
+                Console.WriteLine($"Locked: {(realtime.IsLocked().HasValue ? (realtime.IsLocked()!.Value ? "yes" : "no") : "unknown")}");
                 Console.WriteLine($"Doors open: {(realtime.IsAnyDoorOpen() ? "yes" : "no")}");
                 Console.WriteLine($"Windows open: {(realtime.IsAnyWindowOpen() ? "yes" : "no")}");
                 Console.WriteLine($"Tire pressure unit: {realtime.TirePressUnit}");

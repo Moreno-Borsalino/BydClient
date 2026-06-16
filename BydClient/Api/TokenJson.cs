@@ -83,16 +83,16 @@ namespace BydClient.Api;
                 ["countryCode"] = config.CountryCode,
                 ["encryData"] = encryData,
                 ["identifier"] = session.UserId,
-                ["imeiMD5"] = config.Device.ImeiMd5,
+                ["imeiMD5"] = config.Device is not null ? config.Device.ImeiMd5 : string.Empty,
                 ["language"] = config.Language,
                 ["reqTimestamp"] = reqTimestamp,
                 ["sign"] = sign,
-                ["ostype"] = config.Device.OsType,
-                ["imei"] = config.Device.Imei,
-                ["mac"] = config.Device.Mac,
-                ["model"] = config.Device.Model,
-                ["sdk"] = config.Device.Sdk,
-                ["mod"] = config.Device.Mod,
+                ["ostype"] = config.Device is not null ? config.Device.OsType : string.Empty,
+                ["imei"] = config.Device is not null ? config.Device.Imei : string.Empty,
+                ["mac"] = config.Device is not null ? config.Device.Mac : string.Empty,
+                ["model"] = config.Device is not null ? config.Device.Model : string.Empty,
+                ["sdk"] = config.Device is not null ? config.Device.Sdk : string.Empty,
+                ["mod"] = config.Device is not null ? config.Device.Mod : string.Empty,
                 ["serviceTime"] = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString()
             };
 

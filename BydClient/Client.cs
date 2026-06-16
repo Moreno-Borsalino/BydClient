@@ -277,7 +277,7 @@ public class Client : IDisposable
                     mergedLatest = latest;
                 }
 
-                if(GpsInfo.IsGpsInfoReady(latest))
+                if(GpsInfo.IsGpsInfoReady(latest!))
                 {
                     break;
                 }

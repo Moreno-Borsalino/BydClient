@@ -33,9 +33,9 @@ public class SeatClimateParams : BaseModel, IControlParams
     /// Convert to control parameters map (string values).
     /// Mirrors PHP: numeric values for seat levels and '1'/'0' for booleans.
     /// </summary>
-    public IDictionary<string, string> ToControlParamsMap()
+    public IDictionary<string, string?> ToControlParamsMap()
     {
-        var map = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        var map = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
 
         if(SeatHeating.HasValue)
             map["seatHeating"] = SeatHeating.Value.ToString(CultureInfo.InvariantCulture);

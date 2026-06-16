@@ -12,7 +12,7 @@ public class BydControlPasswordException : BydException
     /// </summary>
     public string Endpoint { get; }
 
-    public BydControlPasswordException(string message, int code = 0, string endpoint = "", Exception previous = null)
+    public BydControlPasswordException(string message, int code = 0, string endpoint = "", Exception? previous = null)
         : base(message, previous)
     {
         Endpoint = endpoint;

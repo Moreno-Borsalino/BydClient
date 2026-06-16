@@ -132,13 +132,13 @@ public class HvacStatus : BaseModel
 
     public int? WhetherSupportAdjustTemp { get; private set; } = null;
 
-    public HvacStatus(Dictionary<string, object> hvacData): base(hvacData)
+    public HvacStatus(Dictionary<string, object?> hvacData): base(hvacData)
     {
         
     }
 
     /// <param name="data">Dictionary of string keys and mixed values</param>
-    protected override void Populate(IDictionary<string, object> data)
+    protected override void Populate(IDictionary<string, object?> data)
     {
         this.Status = data.ContainsKey("status") && Enum.IsDefined(typeof(HvacOverallStatus), Convert.ToInt32(data["status"]))
             ? (HvacOverallStatus)Convert.ToInt32(data["status"])

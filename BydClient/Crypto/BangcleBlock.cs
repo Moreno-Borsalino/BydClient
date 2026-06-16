@@ -103,7 +103,9 @@ public static class BangcleBlock
 
                         byte u_var1 = (byte)((b_var3_inner << 4) & 0xFF);
                         byte u_var27 = (byte)(u_var6 | u_var1);
+#pragma warning disable CS0675 // Bitwise-or operator used on a sign-extended operand
                         u_var26 = (byte)(((u_var26 >> 4) | ((b_var3_inner >> 4) << 4)) & 0xFF);
+#pragma warning restore CS0675 // Bitwise-or operator used on a sign-extended operand
 
                         int idx1 = (l_var2 + (i_var25 - 1)) * 0x100 + u_var27;
                         u_var6 = (byte)(tables["inv_xor"][idx1] & 0xF);
@@ -236,7 +238,9 @@ public static class BangcleBlock
 
                         byte u_var1 = (byte)((b_var4_inner << 4) & 0xFF);
                         byte u_var27 = (byte)(u_var7 | u_var1);
+#pragma warning disable CS0675 // Bitwise-or operator used on a sign-extended operand
                         u_var26 = (byte)(((u_var26 >> 4) | ((b_var4_inner >> 4) << 4)) & 0xFF);
+#pragma warning restore CS0675 // Bitwise-or operator used on a sign-extended operand
 
                         int idx1 = (l_var2 + (i_var25 - 1)) * 0x100 + u_var27;
                         u_var7 = (byte)(tables["xor"][idx1] & 0xF);

@@ -12,7 +12,7 @@ public class BydTransportException : Exception
     public int StatusCode { get; }
     public string Endpoint { get; }
 
-    public BydTransportException(string message, int statusCode = 0, string endpoint = "", Exception innerException = null)
+    public BydTransportException(string message, int statusCode = 0, string endpoint = "", Exception? innerException = null)
         : base(message, innerException)
     {
         StatusCode = statusCode;

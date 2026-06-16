@@ -46,7 +46,7 @@ public static class Pkcs7
     /// <returns>Unpadded data, or the original data if padding is invalid.</returns>
     public static byte[] StripPkcs7(byte[] data)
     {
-        if(data == null || data.Length == 0) return data;
+        if(data == null || data.Length == 0) return data!;
 
         int dataLength = data.Length;
         int pad = data[dataLength - 1];

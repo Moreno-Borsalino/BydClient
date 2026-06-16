@@ -29,9 +29,9 @@ public class BaseModel
         // To be overridden by subclasses
     }
 
-    public Dictionary<string, object> ToDictionary()
+    public Dictionary<string, object?> ToDictionary()
     {
-        var result = new Dictionary<string, object>();
+        var result = new Dictionary<string, object?>();
         var properties = this.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
         foreach(var prop in properties)
@@ -80,7 +80,7 @@ public class BaseModel
         return Regex.Replace(str, "(?<!^)([A-Z])", "_$1").ToLower();
     }
 
-    public IDictionary<string, object> GetRaw()
+    public IDictionary<string, object?> GetRaw()
     {
         return raw;
     }

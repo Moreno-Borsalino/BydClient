@@ -115,7 +115,7 @@ public static class ControlApi
         // Helpers
         // --------------------------------------------------------
 
-        private static bool IsRemoteControlReady(Dictionary<string, object> data)
+        private static bool IsRemoteControlReady(Dictionary<string, object?> data)
         {
             if(data.Count == 0)
                 return false;
@@ -144,7 +144,7 @@ public static class ControlApi
         // Single endpoint fetch
         // --------------------------------------------------------
 
-        private static async Task<(Dictionary<string, object>, string?)> FetchControlEndpointAsync(
+        private static async Task<(Dictionary<string, object?>, string?)> FetchControlEndpointAsync(
             string endpoint,
             BydConfig config,
             Session session,
@@ -174,7 +174,7 @@ public static class ControlApi
                     .ToArray()
                 : ControlPasswordErrorCodes;
 
-            Dictionary<string, object> result;
+            Dictionary<string, object?> result;
 
             try
             {
@@ -189,7 +189,7 @@ public static class ControlApi
                     null,
                     errorCodes);
 
-                result = response as Dictionary<string, object> ?? new();
+                result = response as Dictionary<string, object?> ?? new Dictionary<string, object?>();
             }
             catch(BydApiException ex)
             {
@@ -275,7 +275,7 @@ public static class ControlApi
             }
 
             // Phase 2: Poll
-            Dictionary<string, object> latest = result;
+            Dictionary<string, object?> latest = result;
 
             for(int attempt = 1; attempt <= pollAttempts; attempt++)
             {

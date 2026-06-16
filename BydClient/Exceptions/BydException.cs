@@ -11,5 +11,5 @@ public class BydException : Exception
 {
     public BydException() : base() { }
     public BydException(string message) : base(message) { }
-    public BydException(string message, Exception innerException) : base(message, innerException) { }
+    public BydException(string message, Exception? innerException) : base(message, innerException) { }
 }

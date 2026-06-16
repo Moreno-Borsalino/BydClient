@@ -19,15 +19,26 @@ public static class Login
     {
         var device = config.Device;
 
-        return new Dictionary<string, string>
-        {
-            ["ostype"] = device.OsType,
-            ["imei"] = device.Imei,
-            ["mac"] = device.Mac,
-            ["model"] = device.Model,
-            ["sdk"] = device.Sdk,
-            ["mod"] = device.Mod
-        };
+        if (device != null)
+            return new Dictionary<string, string>
+            {
+                ["ostype"] = device.OsType,
+                ["imei"] = device.Imei,
+                ["mac"] = device.Mac,
+                ["model"] = device.Model,
+                ["sdk"] = device.Sdk,
+                ["mod"] = device.Mod
+            };
+        else
+            return new Dictionary<string, string>
+            {
+                ["ostype"] = string.Empty,
+                ["imei"] = string.Empty,
+                ["mac"] = string.Empty,
+                ["model"] = string.Empty,
+                ["sdk"] = string.Empty,
+                ["mod"] = string.Empty
+            };
     }
 
     public static Dictionary<string, object> BuildLoginRequest(BydConfig config, long nowMs)
@@ -45,15 +56,15 @@ public static class Login
         {
             ["appInnerVersion"] = config.AppInnerVersion,
             ["appVersion"] = config.AppVersion,
-            ["deviceName"] = device.MobileBrand + device.MobileModel,
-            ["deviceType"] = device.DeviceType,
-            ["imeiMD5"] = device.ImeiMd5,
+            ["deviceName"] = device?.MobileBrand + device?.MobileModel,
+            ["deviceType"] = device?.DeviceType,
+            ["imeiMD5"] = device?.ImeiMd5,
             ["isAuto"] = config.IsAuto,
-            ["mobileBrand"] = device.MobileBrand,
-            ["mobileModel"] = device.MobileModel,
-            ["networkType"] = device.NetworkType,
-            ["osType"] = device.OsType,
-            ["osVersion"] = device.OsVersion,
+            ["mobileBrand"] = device?.MobileBrand,
+            ["mobileModel"] = device?.MobileModel,
+            ["networkType"] = device?.NetworkType,
+            ["osType"] = device?.OsType,
+            ["osVersion"] = device?.OsVersion,
             ["random"] = randomHex,
             ["softType"] = config.SoftType,
             ["timeStamp"] = reqTimestamp,
@@ -95,7 +106,7 @@ public static class Login
             ["functionType"] = "pwdLogin",
             ["identifier"] = config.Username,
             ["identifierType"] = "0",
-            ["imeiMD5"] = device.ImeiMd5,
+            ["imeiMD5"] = device is not null ? device.ImeiMd5 : string.Empty,
             ["isAuto"] = config.IsAuto,
             ["language"] = config.Language,
             ["reqTimestamp"] = reqTimestamp,
@@ -159,7 +170,7 @@ public static class Login
         {
             plaintext = BydClient.Crypto.Aes.AesDecryptUtf8(respondDataCipher, Hashing.PwdLoginKey(password));
         }
-        catch(Exception ex)
+        catch
         {
             throw new BydAuthenticationException(
                 "Failed to decrypt login response",

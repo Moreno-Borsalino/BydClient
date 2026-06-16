@@ -21,9 +21,9 @@ public static class Common
 
         var inner = new Dictionary<string, string?>
         {
-            ["deviceType"] = config.Device.DeviceType,
-            ["imeiMD5"] = config.Device.ImeiMd5,
-            ["networkType"] = config.Device.NetworkType,
+            ["deviceType"] = config.Device?.DeviceType,
+            ["imeiMD5"] = config.Device?.ImeiMd5,
+            ["networkType"] = config.Device?.NetworkType,
             ["random"] = GenerateRandomHex(16),
             ["timeStamp"] = nowMs.Value.ToString(),
             ["version"] = config.AppInnerVersion

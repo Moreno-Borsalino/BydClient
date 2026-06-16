@@ -21,7 +21,7 @@ public class BydApiException : BydException
     /// <param name="code">A numeric value that indicates the error code.</param>
     /// <param name="endpoint">The API endpoint that was called.</param>
     /// <param name="previous">The exception that is the cause of the current exception.</param>
-    public BydApiException(string message, int code = 0, string endpoint = "", Exception previous = null)
+    public BydApiException(string message, int code = 0, string endpoint = "", Exception? previous = null)
         : base(message, previous)
     {
         Endpoint = endpoint;

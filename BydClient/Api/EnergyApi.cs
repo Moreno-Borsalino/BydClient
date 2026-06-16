@@ -27,7 +27,7 @@ public sealed class EnergyApi
                                     // behaviour for any direct caller.
         inner["tboxVersion"] = config.GetTboxVersion();
 
-        object decoded = await TokenJson.PostTokenJsonAsync(
+        object? decoded = await TokenJson.PostTokenJsonAsync(
             ENDPOINT,
             config,
             session,

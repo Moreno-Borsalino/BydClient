@@ -21,7 +21,7 @@ public class ClimateScheduleParams : BaseModel, IControlParams
     /**
      * @param Dictionary<string, object> $data
      */
-    protected override void Populate(IDictionary<string, object> data)
+    protected override void Populate(IDictionary<string, object?> data)
     {
         if(data == null)
         {

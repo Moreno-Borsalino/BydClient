@@ -8,8 +8,8 @@ namespace BydClient;
 public class Session
 {
     private readonly DateTime _createdAt;
-    private string _contentKeyCache;
-    private string _signKeyCache;
+    private string _contentKeyCache = string.Empty;
+    private string _signKeyCache = string.Empty;
 
     public string UserId { get; }
     public string SignToken { get; }
@@ -31,7 +31,7 @@ public class Session
     /// </summary>
     public string ContentKey()
     {
-        if (_contentKeyCache == null)
+        if (string.IsNullOrEmpty(_contentKeyCache))
         {
             _contentKeyCache = Md5Hex(EncryToken);
         }
@@ -45,7 +45,7 @@ public class Session
     /// </summary>
     public string SignKey()
     {
-        if (_signKeyCache == null)
+        if (string.IsNullOrEmpty(_signKeyCache))
         {
             _signKeyCache = Md5Hex(SignToken);
         }

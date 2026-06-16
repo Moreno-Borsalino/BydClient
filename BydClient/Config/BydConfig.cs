@@ -109,9 +109,9 @@ public sealed class BydConfig
                 .Where(parts => parts.Length == 5)
                 .ToDictionary(parts => parts[0], parts => parts[3]);
 
-            if (country2node.TryGetValue(countryCode, out string node))
+            if (country2node.TryGetValue(countryCode, out string? node))
             {
-                if (node2server.TryGetValue(node, out string serverUrl))
+                if (node2server.TryGetValue(node, out string? serverUrl))
                 {
                     return serverUrl;
                 }
@@ -138,9 +138,9 @@ public sealed class BydConfig
                 .Where(parts => parts.Length == 3)
                 .ToDictionary(parts => parts[1], parts => parts[2]);
 
-            if (country2language.TryGetValue(countryCode, out string lang))
+            if (country2language.TryGetValue(countryCode, out string? lang))
             {
-                return lang;
+                return lang ?? "en";
             }
         }
 

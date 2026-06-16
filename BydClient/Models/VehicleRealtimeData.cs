@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using static BydClient.Models.HvacStatus;
 
@@ -406,7 +407,7 @@ public class VehicleRealtimeData : BaseModel
     }
 
     // --- isReadyRaw equivalent ---
-    public static bool IsReadyRaw(IDictionary<string, object?> vehicleInfo)
+    public static bool IsReadyRaw(IDictionary<string, object?>? vehicleInfo)
     {
         if(vehicleInfo == null || vehicleInfo.Count == 0) return false;
 
